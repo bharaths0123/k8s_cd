@@ -20,12 +20,12 @@ spec:
       - name: my-registry-key
       containers:
       - name: elevendevops-container
-        image: elevendevops/myelevendevopsimage:3
+        image: bharaths987/docker_ci:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
 
-----
+---
 
 apiVersion: v1
 kind: Service
@@ -39,7 +39,7 @@ spec:
  ports:
   - targetPort: 8080
     port: 8080
-    nodePort: 30018
+    nodePort: 30072
  selector:
    app: my-app
 
